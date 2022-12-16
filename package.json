@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/soloVlad/library-odin/issues"
   },
-  "homepage": "https://github.com/soloVlad/library-odin#readme"
+  "homepage": "https://github.com/soloVlad/library-odin#readme",
+  "devDependencies": {
+    "eslint": "^8.29.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
 }
