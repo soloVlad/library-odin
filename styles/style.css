@@ -1,0 +1,8 @@
+.navbar-brand {
+    padding: 0 20px;
+    font-size: 32px;
+}
+
+.nav-icon {
+    filter: invert(31%) sepia(94%) saturate(3117%) hue-rotate(65deg) brightness(96%) contrast(88%);
+}
