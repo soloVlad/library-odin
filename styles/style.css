@@ -20,6 +20,11 @@ body {
     flex-direction: column;
 }
 
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
 .header {
     padding: 5px 40px;
     background-color: var(--navy);
@@ -37,8 +42,52 @@ body {
     filter: invert(54%) sepia(29%) saturate(735%) hue-rotate(314deg) brightness(97%) contrast(79%);
 }
 
+.header-title-text {
+    font-size: 34px;
+    font-weight: 700;
+}
+
 
 .main {
+    padding: 40px;
     background-color: var(--grey);
     flex: 1;
+}
+
+.library-container {
+    display: grid;
+    justify-content: center;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.book-card {
+    min-height: 300px;
+
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--vintage);
+    border-radius: 15px;
+    color: var(--navy);
+}
+
+.book-title {
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--navy)
+}
+
+.book-author {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.book-pages-number {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 400;
 }
