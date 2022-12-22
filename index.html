@@ -93,29 +93,31 @@
       </div>
     </main>
 
-    <!-- <form action="" class="book-form">
-      <h1 class="book-form-title">Book</h1>
-      <div class="book-form-field">
-        <input type="text" id="title" name="title" class="book-form-input" />
-        <label for="title" class="book-form-label">Title:</label>
-      </div>
-      <div class="book-form-field">
-        <input type="text" id="author" name="author" class="book-form-input" />
-        <label for="author" class="book-form-label">Author:</label>
-      </div>
-      <div class="book-form-field">
-        <input type="text" id="pages-amount" name="pages-amount" class="book-form-input" />
-        <label for="pages-amount" class="book-form-label">Pages amount:</label>
-      </div>
-      <div class="book-form-field">
-        <p for="" class="book-form-label">Is book read:</p>
-
-        <input type="radio" id="read" name="is_book_read" value="true" class="book-form-input" />
-        <label for="read">read</label>
-
-        <input type="radio" id="not-read" name="is_book_read" value="false" class="book-form-input" />
-        <label for="not-read">not read</label>
-      </div>
-    </form> -->
+    <div class="modal">
+      <form action="" class="book-form">
+        <p class="book-form-title">Book</p>
+        <div class="book-form-field">
+          <label for="title" class="book-form-label">Title:</label>
+          <input type="text" id="title" name="title" class="book-form-input" />
+        </div>
+        <div class="book-form-field">
+          <label for="author" class="book-form-label">Author:</label>
+          <input type="text" id="author" name="author" class="book-form-input" />
+        </div>
+        <div class="book-form-field">
+          <label for="pages-amount" class="book-form-label">Pages amount:</label>
+          <input type="number" id="pages-amount" name="pages-amount" class="book-form-input" />
+        </div>
+        <div class="book-form-field-radio">
+          <p class="book-form-label">Is book read:</p>
+  
+          <input type="radio" id="read" name="is_book_read" value="true" class="book-form-input" />
+          <label for="read" class="book-form-option-label">read</label>
+  
+          <input type="radio" id="not-read" name="is_book_read" value="false" class="book-form-input" />
+          <label for="not-read" class="book-form-option-label">not read</label>
+        </div>
+      </form>
+    </div>
   </body>
 </html>

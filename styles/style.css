@@ -14,6 +14,7 @@
 }
 
 body {
+    position: relative;
     font-family: 'Rubik', sans-serif;
     min-height: 100vh;
     display: flex;
@@ -99,4 +100,77 @@ body {
 
 .book-state {
     margin-top: auto;
+}
+
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.book-form {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--grey);
+    background-color: var(--vintage);
+    padding: 30px;
+    border-radius: 15px;
+    color: var(--navy);
+}
+
+.book-form-title {
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.book-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.book-form-label {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.book-form-input {
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    border: 2px solid var(--navy);
+    transition: 0.2s ease-out all;
+    color: var(--navy);
+    font-size: 16px;
+    background-color: var(--grey);
+}
+
+.book-form-input:focus {
+    border-radius: 15px;
+}
+
+.book-form-input:focus,
+.book-form-input:hover {
+    background-color: #dddddd;
+}
+
+.book-form-option-label {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    transition: 0.2s ease-out all;
+}
+
+input[type="radio"]:hover {
+    cursor: pointer;
 }
