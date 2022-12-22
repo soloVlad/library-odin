@@ -1,8 +1,44 @@
-.navbar-brand {
-    padding: 0 20px;
-    font-size: 32px;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.nav-icon {
-    filter: invert(31%) sepia(94%) saturate(3117%) hue-rotate(65deg) brightness(96%) contrast(88%);
+:root {
+    --navy: #2B3A55;
+    --peach: #CE7777;
+    --vintage: #E8C4C4;
+    --grey: #F2E5E5;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 5px 40px;
+    background-color: var(--navy);
+}
+
+.header-title-container {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--peach);
+}
+
+.header-title-icon {
+    width: 50px;
+    filter: invert(54%) sepia(29%) saturate(735%) hue-rotate(314deg) brightness(97%) contrast(79%);
+}
+
+
+.main {
+    background-color: var(--grey);
+    flex: 1;
 }
