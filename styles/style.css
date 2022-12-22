@@ -26,6 +26,7 @@ body {
 }
 
 .header {
+    position: relative;
     padding: 5px 40px;
     background-color: var(--navy);
 }
@@ -49,14 +50,13 @@ body {
 
 
 .main {
-    padding: 40px;
+    padding: 70px 40px;
     background-color: var(--grey);
     flex: 1;
 }
 
 .library-container {
     display: grid;
-    justify-content: center;
     gap: 40px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
@@ -71,13 +71,18 @@ body {
     background-color: var(--vintage);
     border-radius: 15px;
     color: var(--navy);
+
+    transition: 0.2s ease-out all;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
 }
 
 .book-title {
     margin-bottom: 25px;
     font-size: 24px;
     font-weight: 500;
-    color: var(--navy)
 }
 
 .book-author {
@@ -90,4 +95,8 @@ body {
     margin-bottom: 15px;
     font-size: 18px;
     font-weight: 400;
+}
+
+.book-state {
+    margin-top: auto;
 }
