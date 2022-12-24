@@ -114,6 +114,7 @@ body {
 }
 
 .book-form {
+    position: relative;
     min-width: 320px;
     display: flex;
     flex-direction: column;
@@ -123,6 +124,33 @@ body {
     padding: 30px;
     border-radius: 15px;
     color: var(--navy);
+}
+
+.close-button {
+    position: absolute;
+    height: 24px;
+    top: 18px;
+    right: 16px;
+    transition: 0.2s ease-out all;
+}
+
+.close-button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.line {
+    width: 24px;
+    height: 5px;
+    background-color: var(--navy);
+}
+
+.first-line {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.second-line {
+    transform: translateY(3px) rotate(-45deg);
 }
 
 .book-form-title {
