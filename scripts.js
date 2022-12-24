@@ -82,7 +82,7 @@ function createDisplayableBook(book, index) {
   bookTitle.textContent = book.title;
   bookAuthor.textContent = book.author;
   bookPagesNumber.textContent = book.numberOfPages;
-  bookState.textContent = book.isRead ? 'read' : 'not read';
+  bookState.textContent = book.isRead === 'true' ? 'read' : 'not read';
 
   bookDisplayable.appendChild(bookTitle);
   bookDisplayable.appendChild(bookAuthor);
