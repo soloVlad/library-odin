@@ -8,6 +8,7 @@
 
 :root {
     --navy: #2B3A55;
+    --dark-navy: #283347;
     --peach: #CE7777;
     --vintage: #E8C4C4;
     --grey: #F2E5E5;
@@ -244,4 +245,20 @@ input[type="radio"]:hover {
 
 .book-form-option-label:first-child {
     margin-right: 10px;
+}
+
+.form-submit-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--navy);
+    color: var(--grey);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.form-submit-button:hover {
+    cursor: pointer;
+    background-color: var(--dark-navy);
 }
