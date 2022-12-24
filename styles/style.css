@@ -66,15 +66,12 @@ body {
 
 .book-card {
     min-height: 300px;
-
     padding: 30px;
     display: flex;
     flex-direction: column;
-
     background-color: var(--vintage);
     border-radius: 15px;
     color: var(--navy);
-
     transition: 0.2s ease-out all;
 }
 
