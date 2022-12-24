@@ -105,6 +105,7 @@ function handleBookInput(event) {
 
   changeModalVisibility();
   event.preventDefault();
+  addBookForm.reset();
 }
 
 addBookForm.addEventListener('submit', handleBookInput);
