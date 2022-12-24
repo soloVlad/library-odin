@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/style.css" />
-  <script defer src="./index.html"></script>
+  <script defer src="./index.js"></script>
 </head>
 
 <body>
@@ -24,8 +24,7 @@
 
   <main class="main">
     <div class="button-container">
-
-      <button class="add-book-button">
+      <button class="add-book-button" id="add-book-main">
         <img src="./assets/icons/add-book.svg" alt="plus" class="add-book-icon">Add
         book
       </button>
@@ -104,9 +103,9 @@
     </div>
   </main>
 
-  <div class="modal">
+  <div class="modal hide" id="modal">
     <form action="" class="book-form">
-      <div class="close-button">
+      <div class="close-button" id="close-modal-button">
         <div class="line first-line"></div>
         <div class="line second-line"></div>
       </div>

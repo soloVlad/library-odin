@@ -1,3 +1,18 @@
+const addButtonMain = document.querySelector('#add-book-main');
+const modalWindow = document.querySelector('#modal');
+const closeModalButton = document.querySelector('#close-modal-button');
+
+function changeVisibility(object) {
+  object.classList.toggle('hide');
+}
+
+function changeModalVisibility() {
+  changeVisibility(modalWindow);
+}
+
+addButtonMain.addEventListener('click', changeModalVisibility);
+closeModalButton.addEventListener('click', changeModalVisibility);
+
 const myLibrary = [];
 
 function Book(title, author, numberOfPages, isRead) {
