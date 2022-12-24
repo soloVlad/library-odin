@@ -9,7 +9,8 @@
         "ecmaVersion": "latest"
     },
     "rules": {
-        "no-console": "off"
+        "no-console": "off",
+        "no-use-before-define": "off"
     }, 
     "extends": [
         "airbnb-base"
