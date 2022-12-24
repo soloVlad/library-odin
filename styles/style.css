@@ -11,6 +11,7 @@
     --peach: #CE7777;
     --vintage: #E8C4C4;
     --grey: #F2E5E5;
+    --dark-grey: #dddddd;
 }
 
 body {
@@ -187,7 +188,13 @@ body {
 
 .book-form-input:focus,
 .book-form-input:hover {
-    background-color: #dddddd;
+    background-color: var(--dark-grey);
+}
+
+.book-form-option-container {
+    display: inline-flex;
+    align-content: center;
+    gap: 4px;
 }
 
 .book-form-option-label {
@@ -195,10 +202,46 @@ body {
     font-size: 16px;
 }
 
+.book-form-field-radio .book-form-label {
+    margin-bottom: 8px;
+}
+
+.book-form-field-radio>div:first-of-type {
+    margin-right: 15px;
+}
+
 input[type="radio"] {
-    transition: 0.2s ease-out all;
+    appearance: none;
+    margin: 0;
+    font: inherit;
+    background-color: var(--grey);
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--navy);
+    border-radius: 5px;
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 20px 20px var(--navy);
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
 }
 
 input[type="radio"]:hover {
     cursor: pointer;
+    background-color: var(--dark-grey);
+}
+
+.book-form-option-label:first-child {
+    margin-right: 10px;
 }
