@@ -29,6 +29,15 @@ Library.prototype.displayAll = function displayAllBooksOnPage() {
   this.books.forEach((book, index) => this.displayBook(book, index));
 };
 
+Library.prototype.clearDisplayedBooks = function clearDisplayedBooksOnPage() {
+  libraryContainer.innerHTML = '';
+};
+
+Library.prototype.updateDisplayedBooks = function updateDisplayedBooksOnPage() {
+  this.clearDisplayedBooks();
+  this.displayAll();
+};
+
 function Book(title, author, numberOfPages, isRead) {
   this.title = title;
   this.author = author;
@@ -69,6 +78,9 @@ function createDisplayableBook(book, index) {
   const bookAuthor = document.createElement('h3');
   const bookPagesNumber = document.createElement('p');
   const bookState = document.createElement('p');
+  const bookDeleteButton = document.createElement('button');
+
+  bookDeleteButton.addEventListener('click', handleBookDeletion);
 
   // for connection between library array and books on page
   bookDisplayable.setAttribute('data-index', index);
@@ -78,30 +90,34 @@ function createDisplayableBook(book, index) {
   bookAuthor.classList.add('book-author');
   bookPagesNumber.classList.add('book-pages-number');
   bookState.classList.add('book-state');
+  bookDeleteButton.classList.add('book-delete-button');
 
   bookTitle.textContent = book.title;
   bookAuthor.textContent = book.author;
   bookPagesNumber.textContent = book.numberOfPages;
   bookState.textContent = book.isRead === 'true' ? 'read' : 'not read';
+  bookDeleteButton.textContent = 'Delete';
 
   bookDisplayable.appendChild(bookTitle);
   bookDisplayable.appendChild(bookAuthor);
   bookDisplayable.appendChild(bookPagesNumber);
   bookDisplayable.appendChild(bookState);
+  bookDisplayable.appendChild(bookDeleteButton);
 
   return bookDisplayable;
 }
 
-function clearDisplayedBooks() {
-  libraryContainer.innerHTML = '';
+function handleBookDeletion(event) {
+  const bookIndex = event.target.parentElement.getAttribute('data-index');
+  library.remove(bookIndex);
+  library.updateDisplayedBooks();
 }
 
 function handleBookInput(event) {
   const bookData = getDataFromInput();
   const book = createBookFromData(bookData);
   library.add(book);
-  clearDisplayedBooks();
-  library.displayAll();
+  library.updateDisplayedBooks();
 
   changeModalVisibility();
   event.preventDefault();

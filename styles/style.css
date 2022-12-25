@@ -101,6 +101,21 @@ body {
     margin-top: auto;
 }
 
+.book-delete-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--navy);
+    color: var(--grey);
+    transition: 0.2s ease-out all;
+}
+
+.book-delete-button:hover {
+    cursor: pointer;
+    background-color: var(--dark-navy);
+    color: var(--dark-grey);
+}
+
 .button-container {
     margin-bottom: 20px;
     display: flex;
