@@ -13,6 +13,8 @@
     --vintage: #E8C4C4;
     --grey: #F2E5E5;
     --dark-grey: #dddddd;
+    --light-green: #9acd32;
+    --light-red: #fa8072;
 }
 
 body {
@@ -101,12 +103,12 @@ body {
     margin-top: auto;
     margin-bottom: 10px;
     border: none;
-    background-color: salmon;
+    background-color: var(--light-red);
     color: var(--navy);
 }
 
 .book-state-active {
-    background-color: yellowgreen;
+    background-color: var(--light-green);
 }
 
 .book-button {
