@@ -40,12 +40,12 @@ body {
     display: flex;
     gap: 10px;
     text-decoration: none;
-    color: var(--peach);
+    color: var(--grey);
 }
 
 .header-title-icon {
     width: 50px;
-    filter: invert(54%) sepia(29%) saturate(735%) hue-rotate(314deg) brightness(97%) contrast(79%);
+    filter: invert(93%) sepia(1%) saturate(2148%) hue-rotate(314deg) brightness(104%) contrast(90%);
 }
 
 .header-title-text {
