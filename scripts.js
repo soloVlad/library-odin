@@ -116,11 +116,15 @@ function createDisplayableBook(book, index) {
 }
 
 function handleChangeBookState(event) {
+  const bookIndex = event.target.parentElement.getAttribute('data-index');
   event.target.classList.toggle('book-state-active');
-  if (event.target.textContent === 'Read') {
+
+  if (library.books[bookIndex].isRead === 'true') {
     event.target.textContent = 'Not read';
+    library.books[bookIndex].isRead = 'false';
   } else {
     event.target.textContent = 'Read';
+    library.books[bookIndex].isRead = 'true';
   }
 }
 
