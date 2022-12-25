@@ -97,21 +97,37 @@ body {
     font-weight: 400;
 }
 
-.book-state {
+.book-state-button {
     margin-top: auto;
+    margin-bottom: 10px;
+    border: none;
+    background-color: salmon;
+    color: var(--navy);
 }
 
-.book-delete-button {
+.book-state-active {
+    background-color: yellowgreen;
+}
+
+.book-button {
     padding: 10px 20px;
     border-radius: 5px;
-    border: none;
-    background-color: var(--navy);
-    color: var(--grey);
+    font-weight: 400;
+    font-size: 16px;
     transition: 0.2s ease-out all;
 }
 
-.book-delete-button:hover {
+.book-button:hover {
     cursor: pointer;
+}
+
+.book-delete-button {
+    border: none;
+    background-color: var(--navy);
+    color: var(--grey);
+}
+
+.book-delete-button:hover {
     background-color: var(--dark-navy);
     color: var(--dark-grey);
 }

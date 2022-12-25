@@ -77,9 +77,10 @@ function createDisplayableBook(book, index) {
   const bookTitle = document.createElement('h2');
   const bookAuthor = document.createElement('h3');
   const bookPagesNumber = document.createElement('p');
-  const bookState = document.createElement('p');
+  const bookState = document.createElement('button');
   const bookDeleteButton = document.createElement('button');
 
+  bookState.addEventListener('click', handleChangeBookState);
   bookDeleteButton.addEventListener('click', handleBookDeletion);
 
   // for connection between library array and books on page
@@ -89,13 +90,20 @@ function createDisplayableBook(book, index) {
   bookTitle.classList.add('book-title');
   bookAuthor.classList.add('book-author');
   bookPagesNumber.classList.add('book-pages-number');
-  bookState.classList.add('book-state');
+  bookState.classList.add('book-state-button');
+  bookState.classList.add('book-button');
+  bookDeleteButton.classList.add('book-button');
   bookDeleteButton.classList.add('book-delete-button');
 
   bookTitle.textContent = book.title;
   bookAuthor.textContent = book.author;
   bookPagesNumber.textContent = book.numberOfPages;
-  bookState.textContent = book.isRead === 'true' ? 'read' : 'not read';
+  if (book.isRead === 'true') {
+    bookState.textContent = 'Read';
+    bookState.classList.add('book-state-active');
+  } else {
+    bookState.textContent = 'Not read';
+  }
   bookDeleteButton.textContent = 'Delete';
 
   bookDisplayable.appendChild(bookTitle);
@@ -105,6 +113,15 @@ function createDisplayableBook(book, index) {
   bookDisplayable.appendChild(bookDeleteButton);
 
   return bookDisplayable;
+}
+
+function handleChangeBookState(event) {
+  event.target.classList.toggle('book-state-active');
+  if (event.target.textContent === 'Read') {
+    event.target.textContent = 'Not read';
+  } else {
+    event.target.textContent = 'Read';
+  }
 }
 
 function handleBookDeletion(event) {
