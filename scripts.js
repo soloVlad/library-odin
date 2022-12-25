@@ -149,3 +149,8 @@ addBookForm.addEventListener('submit', handleBookInput);
 
 addButtonMain.addEventListener('click', changeModalVisibility);
 closeModalButton.addEventListener('click', changeModalVisibility);
+modalWindow.addEventListener('click', (event) => {
+  if (event.target.id === 'modal') {
+    changeModalVisibility();
+  }
+});
