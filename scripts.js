@@ -145,12 +145,13 @@ function handleBookInput(event) {
   addBookForm.reset();
 }
 
-addBookForm.addEventListener('submit', handleBookInput);
-
-addButtonMain.addEventListener('click', changeModalVisibility);
-closeModalButton.addEventListener('click', changeModalVisibility);
-modalWindow.addEventListener('click', (event) => {
+function handleModalClick(event) {
   if (event.target.id === 'modal') {
     changeModalVisibility();
   }
-});
+}
+
+addBookForm.addEventListener('submit', handleBookInput);
+addButtonMain.addEventListener('click', changeModalVisibility);
+closeModalButton.addEventListener('click', changeModalVisibility);
+modalWindow.addEventListener('click', handleModalClick);
