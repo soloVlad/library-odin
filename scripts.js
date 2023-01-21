@@ -8,35 +8,37 @@ const libraryContainer = document.querySelector('#library');
 
 // Data structures
 
-function Library(books = []) {
-  this.books = books;
+class Library {
+  constructor(books = []) {
+    this.books = books;
+  }
+
+  add(book) {
+    this.books.push(book);
+  }
+
+  remove(index) {
+    this.books.splice(index, 1);
+  }
+
+  displayBook(book, index) {
+    const bookDisplayable = createDisplayableBook(book, index);
+    libraryContainer.appendChild(bookDisplayable);
+  }
+
+  displayAll() {
+    this.books.forEach((book, index) => this.displayBook(book, index));
+  }
+
+  clearDisplayedBooks() {
+    libraryContainer.innerHTML = '';
+  }
+
+  updateDisplayedBooks() {
+    this.clearDisplayedBooks();
+    this.displayAll();
+  }
 }
-
-Library.prototype.add = function addBookToLibrary(book) {
-  this.books.push(book);
-};
-
-Library.prototype.remove = function removeBookFromLibrary(index) {
-  this.books.splice(index, 1);
-};
-
-Library.prototype.displayBook = function displayBookOnPage(book, index) {
-  const bookDisplayable = createDisplayableBook(book, index);
-  libraryContainer.appendChild(bookDisplayable);
-};
-
-Library.prototype.displayAll = function displayAllBooksOnPage() {
-  this.books.forEach((book, index) => this.displayBook(book, index));
-};
-
-Library.prototype.clearDisplayedBooks = function clearDisplayedBooksOnPage() {
-  libraryContainer.innerHTML = '';
-};
-
-Library.prototype.updateDisplayedBooks = function updateDisplayedBooksOnPage() {
-  this.clearDisplayedBooks();
-  this.displayAll();
-};
 
 function Book(title, author, numberOfPages, isRead) {
   this.title = title;
